@@ -1,0 +1,36 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Syntax check
+        run: python -m py_compile scripts/upload/serv.py scripts/icmp/icmp_send.py scripts/icmp/icmp_recv.py scripts/Linux-download-test.py scripts/Linux-exfil-test.py
+
+  tabula:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate TABULA catalogue
+        run: node tabula/check.js
+
+      - name: Audit TABULA command syntax
+        run: node tabula/audit.js

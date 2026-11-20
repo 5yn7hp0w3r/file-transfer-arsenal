@@ -1,0 +1,162 @@
+# ---------------------------------------------------------------------------
+# Secrets and credentials
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# SSH / GPG / certificates / password stores
+.ssh/
+.aws/
+.azure/
+.gcloud/
+.kube/
+.docker/config.json
+.netrc
+.git-credentials
+.npmrc
+.pypirc
+.gem/credentials
+.cargo/credentials
+
+id_rsa*
+id_ed25519*
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.kdbx
+*.gpg
+*.asc
+
+secrets.*
+credentials.*
+passwords.*
+tokens.*
+*.secret
+*.secrets
+
+# Local config overrides
+config.local.*
+settings.local.*
+*.local
+
+# ---------------------------------------------------------------------------
+# Lab data, captures, dumps, payloads
+# ---------------------------------------------------------------------------
+# Local lab directories
+cover/
+payload/
+out/
+output/
+loot/
+share/
+tmp/
+captures/
+evidence/
+
+# Generated Windows tester artifacts
+Windows-download-test-*.log
+Windows-download-test-*.csv
+Windows-exfil-test-*.log
+Windows-exfil-test-*.csv
+
+# Packet captures and host telemetry
+*.pcap
+*.pcapng
+*.cap
+*.har
+*.evtx
+*.etl
+*.dmp
+*.mem
+*.raw
+
+# Disk images / VM images
+*.dd
+*.img
+*.iso
+*.vmdk
+*.qcow2
+*.ova
+*.ovf
+*.vhd
+*.vhdx
+
+# Databases and local data
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.old
+
+# Executables, payloads, archives
+# Force-add intentional samples/releases with: git add -f <file>
+*.exe
+*.dll
+*.bin
+*.elf
+*.so
+*.dylib
+*.msi
+*.deb
+*.rpm
+*.apk
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+
+# Generated hashes and encoded blobs
+*.sha256
+*.b64
+*.base64
+
+# ---------------------------------------------------------------------------
+# Logs and temporary files
+# ---------------------------------------------------------------------------
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Node.js
+# ---------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------------------------
+# Editors / OS files
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

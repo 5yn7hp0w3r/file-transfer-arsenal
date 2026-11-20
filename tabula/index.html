@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TABULA - File Transfer Command Generator</title>
+  <meta name="description" content="A small command generator for moving files between attacker and target. Built for OSCP, CPTS, and authorized lab work.">
+  <meta name="theme-color" content="#f2ebdd">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="TABULA - File Transfer Command Generator">
+  <meta property="og:description" content="Set the direction. Pick a channel. Copy the commands.">
+  <meta property="og:image" content="https://5yn7hp0w3r.github.io/file-transfer-arsenal/assets/banner.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="masthead">
+      <a class="wordmark" href="#generator" aria-label="TABULA home">
+        <span class="wordmark-main">TABULA</span>
+        <span class="wordmark-sub">File Transfer Arsenal</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#generator" data-i18n="navGenerator">Generator</a>
+        <a href="https://github.com/5yn7hp0w3r/file-transfer-arsenal" target="_blank" rel="noopener" data-i18n="navGithub">GitHub</a>
+        <button type="button" class="lang-button" id="lang-button" aria-label="Switch language">RU</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Field manual / file transfer</p>
+          <h1 id="hero-title" data-i18n="heroTitle">FILE TRANSFER ARSENAL</h1>
+          <p class="lede" data-i18n="heroLede">Set the direction, choose a channel, and copy the commands that fit the target. Everything is generated in your browser.</p>
+          <p class="hero-note" data-i18n="heroNote">Use only in isolated labs or authorized penetration tests. The author is not responsible for misuse.</p>
+        </div>
+
+        <figure class="hero-figure">
+          <img src="assets/banner.webp" alt="Roman marble sculpture from the File Transfer Arsenal banner" width="1774" height="887" decoding="async">
+          <figcaption data-i18n="heroCaption">TABULA / FIELD MANUAL / 2026</figcaption>
+        </figure>
+      </section>
+
+      <section class="builder" id="generator" aria-label="Command generator">
+        <form class="panel form-panel" id="config" novalidate>
+          <div class="form-intro">
+            <p class="eyebrow" data-i18n="formEyebrow">Configuration</p>
+            <p data-i18n="formIntro">Pick the direction first. The tabula updates as you type.</p>
+            <p class="form-hint" id="example-hint" data-i18n="exampleHint">Example values are loaded. Edit them before copying.</p>
+          </div>
+
+          <fieldset class="form-section">
+            <legend class="section-label"><span class="section-number">I</span><span data-i18n="scenarioLabel">Scenario</span></legend>
+            <div class="choice-grid three">
+              <label class="choice">
+                <input type="radio" name="direction" value="deliver" checked>
+                <span data-i18n="deliver">Deliver</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="direction" value="exfil">
+                <span data-i18n="exfiltrate">Exfiltrate</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="direction" value="both">
+                <span data-i18n="both">Both</span>
+              </label>
+            </div>
+            <p class="profile-note" id="direction-note" data-i18n="directionNote">Deliver moves a file from LHOST to RHOST. Exfiltrate pulls it back.</p>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend class="section-label"><span class="section-number">II</span><span data-i18n="targetLabel">Target OS</span></legend>
+            <div class="choice-grid two">
+              <label class="choice">
+                <input type="radio" name="os" value="windows" checked>
+                <span data-i18n="windows">Windows</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="os" value="linux">
+                <span data-i18n="linux">Linux</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section tool-section">
+            <legend class="section-label"><span class="section-number">III</span><span data-i18n="channelLabel">Channel</span></legend>
+            <div class="channel-groups" id="channel-groups"></div>
+            <p class="profile-note" id="channel-note" data-i18n="channelNote">Channels are grouped by family. Choose the transport the target can reach.</p>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend class="section-label"><span class="section-number">IV</span><span data-i18n="endpointsLabel">Endpoints</span></legend>
+            <div class="endpoint-grid">
+              <label class="field">
+                <span class="field-label field-label-lhost" data-i18n="lhostLabel">LHOST</span>
+                <input id="lhost" name="lhost" type="text" inputmode="url" autocomplete="off" spellcheck="false" value="10.10.14.5" aria-describedby="lhost-error">
+                <small class="field-hint" data-i18n="lhostHint">Your address</small>
+                <small class="field-error" id="lhost-error" aria-live="polite"></small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="lportLabel">LPORT</span>
+                <input id="lport" name="lport" type="text" inputmode="numeric" autocomplete="off" value="8000" aria-describedby="lport-error">
+                <small class="field-hint" data-i18n="lportHint">Listener port</small>
+                <small class="field-error" id="lport-error" aria-live="polite"></small>
+              </label>
+            </div>
+          </fieldset>
+
+          <details class="advanced" id="advanced">
+            <summary><span class="section-number">V</span><span data-i18n="advanced">Advanced parameters</span></summary>
+            <div class="advanced-grid">
+              <label class="field">
+                <span class="field-label" data-i18n="fileLabel">File (download)</span>
+                <input id="file" name="file" type="text" autocomplete="off" spellcheck="false" value="payload.exe">
+                <small class="field-hint" data-i18n="fileHint">File to deliver</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="fileExfilLabel">File (exfil)</span>
+                <input id="file_exfil" name="file_exfil" type="text" autocomplete="off" spellcheck="false" value="secrets.zip">
+                <small class="field-hint" data-i18n="fileExfilHint">File to exfiltrate</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="remoteLabel">RHOST path</span>
+                <input id="remote" name="remote" type="text" autocomplete="off" spellcheck="false" value="C:\Users\Public">
+                <small class="field-hint" data-i18n="remoteHint">Path on the target</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="lhostPathLabel">LHOST path</span>
+                <input id="lhost_path" name="lhost_path" type="text" autocomplete="off" spellcheck="false" value="/tmp/share">
+                <small class="field-hint" data-i18n="lhostPathHint">Path on our machine</small>
+              </label>
+              <label class="field">
+                <span class="field-label field-label-rhost" data-i18n="rhostLabel">RHOST</span>
+                <input id="rhost" name="rhost" type="text" autocomplete="off" spellcheck="false" value="10.10.10.10">
+                <small class="field-hint" data-i18n="rhostHint">Target address</small>
+              </label>
+              <label class="field">
+                <span class="field-label field-label-rhost" data-i18n="rhostUserLabel">RHOST user</span>
+                <input id="rhost_user" name="rhost_user" type="text" autocomplete="off" spellcheck="false" value="rhost_user">
+                <small class="field-hint" data-i18n="rhostUserHint">Target account</small>
+              </label>
+              <label class="field">
+                <span class="field-label field-label-lhost" data-i18n="lhostUserLabel">LHOST user</span>
+                <input id="lhost_user" name="lhost_user" type="text" autocomplete="off" spellcheck="false" value="lhost_user">
+                <small class="field-hint" data-i18n="lhostUserHint">Our account</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="domainLabel">Domain</span>
+                <input id="domain" name="domain" type="text" autocomplete="off" spellcheck="false" value="inlanefreight.local">
+                <small class="field-hint" data-i18n="domainHint">AD or DNS domain</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="rhostPassLabel">RHOST password</span>
+                <input id="rhost_pass" name="rhost_pass" type="password" autocomplete="off" value="Password0@">
+                <small class="field-hint" data-i18n="rhostPassHint">Used only in this page</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="shareNameLabel">Share name</span>
+                <input id="share_name" name="share_name" type="text" autocomplete="off" spellcheck="false" value="share">
+                <small class="field-hint" data-i18n="shareNameHint">SMB share name</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="shareUserLabel">Share user</span>
+                <input id="share_user" name="share_user" type="text" autocomplete="off" spellcheck="false" value="test">
+                <small class="field-hint" data-i18n="shareUserHint">SMB / WebDAV / FTP account</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="sharePassLabel">Share password</span>
+                <input id="share_pass" name="share_pass" type="password" autocomplete="off" value="test">
+                <small class="field-hint" data-i18n="sharePassHint">Used only in this page</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="sshPortLabel">SSH port</span>
+                <input id="ssh_port" name="ssh_port" type="text" inputmode="numeric" autocomplete="off" value="22">
+                <small class="field-hint" data-i18n="sshPortHint">sshd port</small>
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="sshKeyLabel">SSH key</span>
+                <input id="ssh_key" name="ssh_key" type="text" autocomplete="off" spellcheck="false" value="~/.ssh/id_rsa">
+                <small class="field-hint" data-i18n="sshKeyHint">Private key path</small>
+              </label>
+            </div>
+          </details>
+
+          <details class="coverage" id="coverage">
+            <summary><span class="section-number">+</span><span data-i18n="coverageLabel">Coverage filter</span> <span class="coverage-current" id="coverage-current">ALL</span></summary>
+            <div class="choice-grid profile-grid">
+              <label class="choice profile-choice">
+                <input type="radio" name="profile" value="all" checked>
+                <span>
+                  <strong>ALL</strong>
+                  <small data-i18n="profileAll">Every method in the catalogue.</small>
+                </span>
+              </label>
+              <label class="choice profile-choice">
+                <input type="radio" name="profile" value="core">
+                <span>
+                  <strong>OSCP &amp; CPTS</strong>
+                  <small data-i18n="profileCore">Common OSCP and CPTS paths.</small>
+                </span>
+              </label>
+              <label class="choice profile-choice">
+                <input type="radio" name="profile" value="exotic">
+                <span>
+                  <strong>EXOTIC</strong>
+                  <small data-i18n="profileExotic">Non-standard delivery channels and TLS.</small>
+                </span>
+              </label>
+              <label class="choice profile-choice">
+                <input type="radio" name="profile" value="lolbins">
+                <span>
+                  <strong>LOLBINS</strong>
+                  <small data-i18n="profileLolbins">Built-in binaries and native tools.</small>
+                </span>
+              </label>
+            </div>
+            <p class="profile-note" id="profile-note" data-i18n="profileNote">Every method. Lab-only and noisier entries included.</p>
+          </details>
+
+          <div class="form-actions">
+            <button type="button" class="text-button" id="load-example" data-i18n="loadExample">Load example</button>
+            <button type="button" class="text-button" id="reset" data-i18n="reset">Reset</button>
+          </div>
+          <p class="form-privacy" data-i18n="formPrivacy">No data leaves this page. Passwords and key paths are never written to the URL.</p>
+        </form>
+
+        <section class="panel output-panel" aria-labelledby="output-title" aria-live="polite">
+          <header class="output-head">
+            <div>
+              <p class="eyebrow" data-i18n="outputEyebrow">Generated tabula</p>
+              <h2 id="output-title">DELIVER / WINDOWS / HTTP</h2>
+              <p class="output-meta" id="output-meta">LHOST 10.10.14.5 / LPORT 8000 / FILE payload.exe</p>
+              <p class="output-direction-desc" id="output-direction-desc"></p>
+              <p class="output-count" id="method-count">08 METHODS</p>
+            </div>
+            <div class="output-actions">
+              <button type="button" class="text-button" id="copy-all" data-i18n="copyAll">Copy all</button>
+              <button type="button" class="button-primary" id="print" data-i18n="print">Print</button>
+            </div>
+          </header>
+          <div class="output-tools">
+            <label class="search-field">
+              <span class="search-label" data-i18n="searchLabel">Search</span>
+              <input id="method-search" type="search" autocomplete="off" spellcheck="false" placeholder="certutil, powershell, upload…" aria-label="Search methods">
+            </label>
+            <div class="output-tool-actions">
+              <p class="search-note" id="search-note"></p>
+              <button type="button" class="text-button" id="toggle-groups" aria-expanded="true" data-i18n="collapseAll">Collapse all</button>
+            </div>
+          </div>
+          <div class="output-body" id="output"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-i18n="footerLeft">TABULA / FILE TRANSFER ARSENAL</span>
+      <span data-i18n="footerRight">Use only in isolated labs or authorized penetration tests. The author is not responsible for misuse.</span>
+    </footer>
+  </div>
+
+  <noscript>
+    <p class="noscript">TABULA needs JavaScript to generate commands.</p>
+  </noscript>
+
+  <script src="methods.js"></script>
+  <script src="tools.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
