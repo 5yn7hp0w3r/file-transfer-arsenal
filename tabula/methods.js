@@ -133,8 +133,7 @@ window.TABULA_METHODS = [
     "id": "wget",
     "title": "wget",
     "profiles": [
-      "core",
-      "lolbins"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -166,8 +165,7 @@ window.TABULA_METHODS = [
     "title": "Start-BitsTransfer",
     "profiles": [
       "core",
-      "lolbins",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -201,8 +199,7 @@ window.TABULA_METHODS = [
     "id": "curl-linux",
     "title": "curl",
     "profiles": [
-      "core",
-      "lolbins"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -329,8 +326,7 @@ window.TABULA_METHODS = [
     "id": "busybox-download",
     "title": "busybox wget",
     "profiles": [
-      "core",
-      "lolbins"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -457,8 +453,7 @@ window.TABULA_METHODS = [
     "title": "bitsadmin",
     "profiles": [
       "core",
-      "lolbins",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -552,7 +547,7 @@ window.TABULA_METHODS = [
     "id": "bitsadmin-ruby",
     "title": "bitsadmin + Ruby",
     "profiles": [
-      "core",
+      "exotic",
       "lolbins"
     ],
     "os": "windows",
@@ -648,9 +643,8 @@ window.TABULA_METHODS = [
     "id": "iwr-useragent",
     "title": "iwr + browser User-Agent",
     "profiles": [
-      "core",
-      "lolbins",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -683,9 +677,8 @@ window.TABULA_METHODS = [
     "id": "powershell-ep-bypass",
     "title": "PowerShell -ep bypass",
     "profiles": [
-      "core",
-      "lolbins",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -718,9 +711,8 @@ window.TABULA_METHODS = [
     "id": "fileless-iex",
     "title": "Fileless IEX",
     "profiles": [
-      "core",
-      "lolbins",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -762,9 +754,8 @@ window.TABULA_METHODS = [
     "id": "mshta-remote",
     "title": "mshta (remote HTA)",
     "profiles": [
-      "core",
-      "lolbins",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -805,9 +796,8 @@ window.TABULA_METHODS = [
     "id": "regsvr32-sct",
     "title": "regsvr32 SCT (Squiblydoo)",
     "profiles": [
-      "core",
-      "lolbins",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -850,9 +840,8 @@ window.TABULA_METHODS = [
     "id": "desktopimgdownldr",
     "title": "desktopimgdownldr",
     "profiles": [
-      "core",
-      "lolbins",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -885,9 +874,8 @@ window.TABULA_METHODS = [
     "id": "vbscript-wget",
     "title": "VBScript downloader",
     "profiles": [
-      "core",
-      "lolbins",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -928,9 +916,8 @@ window.TABULA_METHODS = [
     "id": "javascript-wget",
     "title": "JavaScript downloader",
     "profiles": [
-      "core",
-      "lolbins",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -971,7 +958,8 @@ window.TABULA_METHODS = [
     "id": "curl-exfil",
     "title": "curl raw POST",
     "profiles": [
-      "core"
+      "core",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -1003,7 +991,8 @@ window.TABULA_METHODS = [
     "id": "irm-exfil",
     "title": "Invoke-RestMethod raw POST",
     "profiles": [
-      "core"
+      "core",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -1035,7 +1024,8 @@ window.TABULA_METHODS = [
     "id": "certreq",
     "title": "certreq -Post (CSR only)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -1184,8 +1174,7 @@ window.TABULA_METHODS = [
     "id": "nginx-upload-linux",
     "title": "nginx PUT (Linux)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "exfil",
@@ -1214,8 +1203,7 @@ window.TABULA_METHODS = [
     "id": "nginx-upload-ps",
     "title": "nginx PUT (PowerShell)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -1244,8 +1232,7 @@ window.TABULA_METHODS = [
     "id": "nginx-upload-win",
     "title": "nginx PUT (Windows)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -1274,8 +1261,7 @@ window.TABULA_METHODS = [
     "id": "updog-download-linux",
     "title": "updog download (Linux)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -1304,8 +1290,7 @@ window.TABULA_METHODS = [
     "id": "updog-download-win",
     "title": "updog download (Windows)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -1334,8 +1319,7 @@ window.TABULA_METHODS = [
     "id": "updog-upload-linux",
     "title": "updog upload (Linux)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "exfil",
@@ -1364,8 +1348,7 @@ window.TABULA_METHODS = [
     "id": "updog-upload-win",
     "title": "updog upload (Windows)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -1458,7 +1441,8 @@ window.TABULA_METHODS = [
     "id": "webdav-webclient-download",
     "title": "WebDAV via WebClient (download)",
     "profiles": [
-      "core"
+      "core",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -1588,7 +1572,8 @@ window.TABULA_METHODS = [
     "id": "webdav-webclient-upload",
     "title": "WebDAV via WebClient (upload)",
     "profiles": [
-      "core"
+      "core",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -1653,7 +1638,8 @@ window.TABULA_METHODS = [
     "id": "smb",
     "title": "impacket SMB share (download)",
     "profiles": [
-      "core"
+      "core",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -1906,7 +1892,8 @@ window.TABULA_METHODS = [
     "id": "smb-exfil",
     "title": "impacket SMB share (upload)",
     "profiles": [
-      "core"
+      "core",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -3056,7 +3043,8 @@ window.TABULA_METHODS = [
     "id": "rdp-deliver",
     "title": "RDP drive mount (download)",
     "profiles": [
-      "core"
+      "core",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -3090,7 +3078,8 @@ window.TABULA_METHODS = [
     "id": "rdp-exfil",
     "title": "RDP drive mount (upload)",
     "profiles": [
-      "core"
+      "core",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -3159,7 +3148,8 @@ window.TABULA_METHODS = [
     "title": "WinRM check",
     "profiles": [
       "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -3198,7 +3188,8 @@ window.TABULA_METHODS = [
     "title": "WinRM Copy-Item (deliver)",
     "profiles": [
       "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -3227,7 +3218,8 @@ window.TABULA_METHODS = [
     "title": "WinRM enable",
     "profiles": [
       "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -3266,7 +3258,8 @@ window.TABULA_METHODS = [
     "title": "WinRM Copy-Item (exfil)",
     "profiles": [
       "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -3328,8 +3321,7 @@ window.TABULA_METHODS = [
     "id": "bash-devtcp-raw",
     "title": "bash /dev/tcp (download)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -3439,8 +3431,7 @@ window.TABULA_METHODS = [
     "id": "nc-deliver",
     "title": "netcat reverse (download)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -3576,8 +3567,7 @@ window.TABULA_METHODS = [
     "id": "nc-win-deliver",
     "title": "netcat.exe reverse (download)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -3610,8 +3600,7 @@ window.TABULA_METHODS = [
     "id": "bash-devtcp-exfil",
     "title": "bash /dev/tcp (exfil)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "exfil",
@@ -3679,8 +3668,7 @@ window.TABULA_METHODS = [
     "id": "nc-exfil",
     "title": "netcat reverse (exfil)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "exfil",
@@ -3889,8 +3877,7 @@ window.TABULA_METHODS = [
     "id": "nc-win-exfil",
     "title": "netcat.exe reverse (exfil)",
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -4589,7 +4576,6 @@ window.TABULA_METHODS = [
     "id": "ssh-r-tunnel",
     "title": "ssh -R reverse forward",
     "profiles": [
-      "core",
       "exotic"
     ],
     "os": "linux",
@@ -4764,7 +4750,8 @@ window.TABULA_METHODS = [
     "id": "tftp-win-deliver",
     "title": "TFTP download (Windows)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -4820,7 +4807,8 @@ window.TABULA_METHODS = [
     "id": "tftp-win-exfil",
     "title": "TFTP upload (Windows)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -5710,7 +5698,8 @@ window.TABULA_METHODS = [
     "id": "enc-win-base64-deliver",
     "title": "Base64 (deliver)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -5777,7 +5766,8 @@ window.TABULA_METHODS = [
     "id": "enc-win-hex-deliver",
     "title": "Hex (deliver)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -5811,7 +5801,8 @@ window.TABULA_METHODS = [
     "id": "enc-win-tar-deliver",
     "title": "tar.gz + Base64 (deliver)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -6621,7 +6612,8 @@ window.TABULA_METHODS = [
     "id": "enc-win-base64-exfil",
     "title": "Base64 (exfil)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -6688,7 +6680,8 @@ window.TABULA_METHODS = [
     "id": "enc-win-hex-exfil",
     "title": "Hex (exfil)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -6722,7 +6715,8 @@ window.TABULA_METHODS = [
     "id": "enc-win-tar-exfil",
     "title": "tar.gz + Base64 (exfil)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -7490,8 +7484,7 @@ window.TABULA_METHODS = [
     "id": "webdav-enable-webclient",
     "title": "Enable WebClient service",
     "profiles": [
-      "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -7529,8 +7522,7 @@ window.TABULA_METHODS = [
     "id": "webdav-registry",
     "title": "WebDAV registry for HTTP and size",
     "profiles": [
-      "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -7777,7 +7769,8 @@ window.TABULA_METHODS = [
     "title": "HTTPS download (curl.exe, Windows)",
     "profiles": [
       "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -7817,7 +7810,8 @@ window.TABULA_METHODS = [
     "title": "HTTPS download (PowerShell 7)",
     "profiles": [
       "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -7898,7 +7892,8 @@ window.TABULA_METHODS = [
     "title": "HTTPS uploadserver (Windows)",
     "profiles": [
       "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -7974,7 +7969,8 @@ window.TABULA_METHODS = [
     "title": "HTTPS updog (Windows)",
     "profiles": [
       "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -8048,7 +8044,8 @@ window.TABULA_METHODS = [
     "id": "https-servpy-win",
     "title": "HTTPS serv.py (Windows)",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -8087,7 +8084,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -8118,7 +8115,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -8149,7 +8146,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -8180,7 +8177,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -8211,7 +8208,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -8242,7 +8239,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -8273,7 +8270,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -8304,7 +8301,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -8335,7 +8332,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -8366,7 +8363,7 @@ window.TABULA_METHODS = [
   {
     "profiles": [
       "core",
-      "exotic"
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",
@@ -8396,8 +8393,7 @@ window.TABULA_METHODS = [
   },
   {
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -8427,8 +8423,7 @@ window.TABULA_METHODS = [
   },
   {
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -8458,8 +8453,7 @@ window.TABULA_METHODS = [
   },
   {
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -8489,8 +8483,7 @@ window.TABULA_METHODS = [
   },
   {
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "deliver",
@@ -8520,8 +8513,7 @@ window.TABULA_METHODS = [
   },
   {
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "exfil",
@@ -8551,8 +8543,7 @@ window.TABULA_METHODS = [
   },
   {
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "exfil",
@@ -8582,8 +8573,7 @@ window.TABULA_METHODS = [
   },
   {
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "exfil",
@@ -8613,8 +8603,7 @@ window.TABULA_METHODS = [
   },
   {
     "profiles": [
-      "core",
-      "exotic"
+      "core"
     ],
     "os": "linux",
     "direction": "exfil",
@@ -8689,8 +8678,8 @@ window.TABULA_METHODS = [
     "id": "tftp-enable-win",
     "title": "Enable TFTP client (Windows)",
     "profiles": [
-      "core",
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -10055,7 +10044,8 @@ window.TABULA_METHODS = [
     "id": "steg-ads-hide",
     "title": "NTFS ADS hide",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "deliver",
@@ -10083,7 +10073,8 @@ window.TABULA_METHODS = [
     "id": "steg-ads-extract",
     "title": "NTFS ADS extract",
     "profiles": [
-      "exotic"
+      "exotic",
+      "lolbins"
     ],
     "os": "windows",
     "direction": "exfil",

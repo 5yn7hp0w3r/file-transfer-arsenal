@@ -37,8 +37,19 @@ The generator follows the same order as the handbook:
 5. **Advanced parameters** - paths, accounts, domain, RHOST password, SMB
    share name/user/password, SSH port/key.
 
-`Coverage filter` is a secondary switch, not a primary step. It hides entries
-outside ALL / OSCP & CPTS / EXOTIC / LOLBINS.
+`Coverage filter` is a secondary switch, not a primary step.
+
+### Coverage lenses
+
+- **ALL** - every method, including noisy, dangerous and lab-only paths.
+- **OSCP & CPTS** - standard, reliable methods suitable for exam labs;
+  excludes noisy, danger and transform-heavy entries.
+- **EXOTIC** - non-standard channels, TLS/UDP, covert tricks and heavy
+  transforms (encoding, encryption, steganography).
+- **LOLBINS** - Windows built-in binaries and LOLBins. Linux native tools
+  (curl, wget, bash `/dev/tcp`, base64, tar, ...) are covered by OSCP & CPTS.
+
+A method can belong to several lenses; the filters are not exclusive.
 
 ## Catalogue schema
 
@@ -124,6 +135,7 @@ cmd steps are skipped).
 
 - 299 methods across 25 channels;
 - profile lenses: ALL, OSCP & CPTS, EXOTIC, LOLBINS;
+- coverage sizes: ALL 299 · OSCP & CPTS 150 · EXOTIC 186 · LOLBINS 60;
 - targets: Windows, Linux;
 - directions: Deliver, Exfiltrate, Both;
 - EN/RU interface and notes;
